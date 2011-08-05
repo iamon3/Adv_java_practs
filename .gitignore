@@ -1,0 +1,13 @@
+AdvancedConcepts/bin
+AdvancedConcepts/com.io.eg1.Text
+AdvancedConcepts/so
+AdvancedConcepts/Text
+AdvancedConcepts/bin/*
+.metadata
+.metadata/*
+AdvancedConcepts/.git
+AdvancedConcepts/.git/*
+AdvancedConcepts/.classpath
+AdvancedConcepts/.settings
+AdvancedConcepts/.settings/*
+AdvancedConcepts/.project
