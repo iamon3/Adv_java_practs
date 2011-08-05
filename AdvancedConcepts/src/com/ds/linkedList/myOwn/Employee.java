@@ -25,7 +25,12 @@ public class Employee {
 	public String toString() {
 		return this.id+" "+this.name;
 	}
-	
+    
+	/**
+	 * This is good example of use of Static Inner class with Comparator.
+	 * Since sorting of employees based on employee id doesn't need instance of 
+	 * Separate class, we created inner class 
+	 */
 	public static class EmployeeIdSorter implements Comparator<Employee> {
 
 		@Override
