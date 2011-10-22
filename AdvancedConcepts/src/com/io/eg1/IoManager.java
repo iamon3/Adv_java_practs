@@ -13,7 +13,7 @@ public class IoManager {
 		Scanner ip = new Scanner(System.in);
 		System.out.println("Enter File name");
 		String fileName = ip.next();
-	//	System.out.println("You entered :- "+ fileName);
+		System.out.println("You entered :- "+ fileName);
 		
 		File file = new File(fileName);
 		file.createNewFile();
