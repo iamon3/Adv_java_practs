@@ -42,10 +42,10 @@ public class App {
 	  // Instanciate Thread
       Processor processor = new Processor();
       
-      //Start Thraed
+      //Start Thread
       processor.start();
       
-      //To stop running thread, Press "Return" Key.
+      //Press "Return" Key to stop running thread, 
       new Scanner(System.in).nextLine();
       processor.shutdown();
 	}
