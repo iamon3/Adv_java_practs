@@ -13,3 +13,4 @@ AdvancedConcepts/.settings/*
 AdvancedConcepts/.project
 AdvancedConcepts/AdvancedConcepts.iml
 .idea
+*.class
