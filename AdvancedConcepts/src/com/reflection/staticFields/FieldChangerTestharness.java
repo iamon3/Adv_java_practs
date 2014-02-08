@@ -9,8 +9,6 @@ import java.lang.reflect.Field;
  * This testharness class is used for
  * the class FieldChanger to change the
  * value of the field using reflection.
- * @author Debadatta Mishra(PIKU)
- *
  */
 public class FieldChangerTestharness
 {
@@ -18,7 +16,7 @@ public class FieldChangerTestharness
     {
         try
         {
-            Class cls = Class.forName("com.dds.core.FieldChanger");
+            Class cls = Class.forName("com.reflection.staticFields.FieldChanger");
             Object obj = cls.newInstance();
             Field[] fields = cls.getDeclaredFields();
             fields[0].setAccessible( true );

@@ -13,7 +13,7 @@ public class LoverTestharness
     {
         try
         {
-            Class cls = Class.forName("com.dds.core.Lover");
+            Class cls = Class.forName("com.reflection.privateMethods.Lover");
             Object obj = cls.newInstance();
             Method[] methods =  cls.getDeclaredMethods();
             for( int i = 0 ; i < methods.length ; i++ )

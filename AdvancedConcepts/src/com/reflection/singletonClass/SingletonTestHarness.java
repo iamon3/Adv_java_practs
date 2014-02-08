@@ -1,4 +1,4 @@
-package com.reflection.singletoneClass;
+package com.reflection.singletonClass;
 
 import java.lang.reflect.Constructor;
 /**
@@ -13,7 +13,7 @@ public class SingletonTestHarness
     {
         try
         {
-            Class cls = Class.forName("com.dds.core.MySingleton");
+            Class cls = Class.forName("com.reflection.singletonClass.MySingleton");
             Constructor[] constructors = cls.getDeclaredConstructors();
             System.out.println("Constructor Name--->>>"+constructors[0].getName());
             constructors[0].setAccessible(true);

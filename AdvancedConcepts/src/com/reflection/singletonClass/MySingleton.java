@@ -1,4 +1,4 @@
-package com.reflection.singletoneClass;
+package com.reflection.singletonClass;
 
 /**
  * This is a class which represents a singleton

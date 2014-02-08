@@ -10,8 +10,18 @@ package com.reflection.privateConstructor;
  */
 public class Student
 {
+    private String name;
+
     private Student()
     {
         super();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
