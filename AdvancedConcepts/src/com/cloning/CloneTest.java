@@ -1,4 +1,4 @@
-package com.cloneStuff;
+package com.cloning;
 
 public class CloneTest {
 

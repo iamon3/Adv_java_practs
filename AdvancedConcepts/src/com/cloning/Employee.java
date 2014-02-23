@@ -1,4 +1,4 @@
-package com.cloneStuff;
+package com.cloning;
 
 public class Employee implements Cloneable{
 	private int id ;
