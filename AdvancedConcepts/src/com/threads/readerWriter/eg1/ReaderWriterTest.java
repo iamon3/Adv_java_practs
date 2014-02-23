@@ -1,4 +1,4 @@
-package com.threads.readerWriter;
+package com.threads.readerWriter.eg1;
 
 /**
  */
