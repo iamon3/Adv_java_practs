@@ -1,4 +1,4 @@
-package com.threads.executorFramework.eg2SingleThreadExecutor;
+package com.threads.executorFramework.executors.eg2SingleThreadExecutor;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
