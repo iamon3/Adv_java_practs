@@ -14,3 +14,6 @@ AdvancedConcepts/.project
 AdvancedConcepts/AdvancedConcepts.iml
 .idea
 *.class
+.classpath
+.project
+bin/
