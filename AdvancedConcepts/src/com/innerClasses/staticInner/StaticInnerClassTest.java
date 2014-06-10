@@ -8,6 +8,10 @@ package com.innerClasses.staticInner;
  * 3. An inner class may not have static members unless the inner class is itself marked as static.
  * 4. Sometimes static nested class are not referred to as inner class at all, as they don’t require outer classes instance.
  * 5. A static inner class is just like any other inner class, but it dose not have the reference to its outer class object that generated it.
+ * 
+ * http://docs.oracle.com/javase/tutorial/java/javaOO/whentouse.html
+ * USE : Use a non-static nested class (or inner class) if you require access to an enclosing instance's non-public fields and methods. 
+ *       Use a static nested class if you don't require this access.
  */
 
 class OuterClass{

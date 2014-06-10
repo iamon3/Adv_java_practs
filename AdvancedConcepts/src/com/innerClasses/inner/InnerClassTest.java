@@ -18,6 +18,10 @@ package com.innerClasses.inner;
  *    
  * 6. The outer class can call even the private methods of the inner class.
  * 
+ * Use : Provide different Comparators
+ *       Use it if your requirements are similar to those of a local class, you want to make the type more widely available, 
+ *       and you don't require access to local variables or method parameters.
+ * 
  */
 class OuterClass{
 	String outerMember = "Outer";
