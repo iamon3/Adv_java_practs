@@ -33,22 +33,22 @@ class Reader implements Runnable{
     @Override
     public void run() {
         for(int i=0; i<10; i++){
-            System.out.println("In MyCollectionProcessor1 thread. Counter : " + i);
+            System.out.println("In Reader thread. Counter : " + i);
             synchronized (monitor){
-                if(false == DBConnection.flag){
+                if(false == DBConnection.flag){ // Writer Turn
                     try {
-                        System.out.println("MyCollectionProcessor1 thread going to wait");
+                        System.out.println("Reader thread going to wait");
                         monitor.wait();
                     } catch (InterruptedException e) {
-                        System.out.println("In MyCollectionProcessor1 thread exception : " + e.toString());
+                        System.out.println("In Reader thread exception : " + e.toString());
                     }
                 }else{
-                    System.out.println("In MyCollectionProcessor1 thread's turn");
+                    System.out.println("In Reader thread's turn");
                 }
-                System.out.println("In MyCollectionProcessor1 thread with id : " + Thread.currentThread().getId());
+                System.out.println("In Reader thread with id : " + Thread.currentThread().getId());
                 DBConnection.read();
-                DBConnection.flag = false;
-                System.out.println("Reading is done. MyCollectionProcessor1 thread going to notify");
+                DBConnection.flag = false; // Set turn to Writer
+                System.out.println("Reading is done. Reader thread going to notify");
                 monitor.notify();
             }
         }
@@ -66,22 +66,22 @@ class Writer implements Runnable{
     @Override
     public void run() {
         for(int i=0; i<10; i++){
-            System.out.println("In MyCollectionProcessor2 thread. Counter : " + i);
+            System.out.println("In Writer thread. Counter : " + i);
             synchronized (monitor){
-                if(true == DBConnection.flag){
+                if(true == DBConnection.flag){ // Reader Turn
                     try {
-                        System.out.println("In MyCollectionProcessor2 thread. going to wait");
+                        System.out.println("In Writer thread. going to wait");
                         monitor.wait();
                     } catch (InterruptedException e) {
-                        System.out.println("In MyCollectionProcessor2 thread exception : " + e.toString());
+                        System.out.println("In Writer thread exception : " + e.toString());
                     }
                 }else{
-                    System.out.println("In MyCollectionProcessor2 thread's turn");
+                    System.out.println("In Writer thread's turn");
                 }
-                System.out.println("In MyCollectionProcessor2 thread with id : " + Thread.currentThread().getId());
+                System.out.println("In Writer thread with id : " + Thread.currentThread().getId());
                 DBConnection.write();
-                DBConnection.flag = true;
-                System.out.println("Writing is done. MyCollectionProcessor2 is going to notify");
+                DBConnection.flag = true; // Set turn to Reader
+                System.out.println("Writing is done. Writer is going to notify");
                 monitor.notify();
             }
         }
