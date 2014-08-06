@@ -7,10 +7,10 @@ public class QuickSortDemo {
 	public static void main(String[] args) {
 		int[] arr = {5,2,9,1,7,6,4,15,11,3,8,10,14,13};
 
-		System.out.println("QuickSort : Before Sorting :- \n" + Arrays.toString(arr));
+		System.out.println("#############\nQuickSort : Before Sorting :- \n" + Arrays.toString(arr)+"\n#############");
 		QuickSortDemo quickSortDemo = new QuickSortDemo();
 		quickSortDemo.quickSort(arr);
-		System.out.println("QuickSort : After Sorting :- \n" + Arrays.toString(arr));
+		System.out.println("\n###########QuickSort : After Sorting :- \n" + Arrays.toString(arr)+"\n#############");
 	}
 
 	public void quickSort(int[] arr){
@@ -27,6 +27,7 @@ public class QuickSortDemo {
 	protected void quickSort(int low, int high, int[] input){
 		if(low < high){
 			int partitioningIndex = partition(low, high, input); 
+			System.out.println("##########\nlow : "+low + ", partitioningIndex : " + partitioningIndex + ", high : " + high +", element at partitioningIndex : " + input[partitioningIndex]+"\nAfter partitioning :"+ Arrays.toString(input)+"\n#############");
 			quickSort(low, partitioningIndex-1, input);
 			quickSort(partitioningIndex+1, high, input);
 		}

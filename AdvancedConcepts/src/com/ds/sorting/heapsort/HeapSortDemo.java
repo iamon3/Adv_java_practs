@@ -7,19 +7,23 @@ public class HeapSortDemo {
 	public static void main(String[] args) {
 		int[] arr = {5,2,9,1,7,6,4,15,11,3,8,10,14,13};
 
-		System.out.println("HeapSort : Before Sorting :- \n" + Arrays.toString(arr));
+		System.out.println("############\nHeapSort : Before Sorting :- \n" + Arrays.toString(arr)+"\n#############");
 		HeapSortDemo heapSortDemo = new HeapSortDemo();
 		heapSortDemo.heapSort(arr);
-		System.out.println("HeapSort : After Sorting :- \n" + Arrays.toString(arr));
+		System.out.println("###########\nHeapSort : After Sorting :- \n" + Arrays.toString(arr)+"\n#############");
 	}
 	
 	void heapSort(int[] input){
 		int low = 0;
 		int high = input.length - 1;
 		buildMaxHeap(low, high, input);
+		System.out.println("\n###########\nMax Heap is built \n" + Arrays.toString(input)+"\n#########");
 		for(int k = high-1; k >= 0; k--){
+			System.out.println("\n###########\nBefore swapping max element : " + Arrays.toString(input));
 			swap(0, k+1, input);
+			System.out.println("After swapping max element : " + Arrays.toString(input));
 			maxHeapify(0, k, input );
+			System.out.println("After heapifying arr : " + Arrays.toString(input)+"\n###########");
 		}
 	}
 	
