@@ -18,4 +18,10 @@ public class HashMapChildren<D,C> implements Children<D,C> {
         // First Node with
         //children.put(oldData, node);
     }
+
+	@Override
+	public void addChild(Node<D, C> nodeWithNewData) {
+		// TODO Auto-generated method stub
+		
+	}
 }
