@@ -16,7 +16,7 @@ public class LISRecusriveImpl implements LongestIncreasingSubSequence {
 	private ArrayList<Integer> findLIS(int i, int[] arr) {
 		ArrayList<Integer> lis ;
 		
-		if(i == arr.length){
+		if(i == arr.length-1){
 			lis = new ArrayList<Integer>();
 			lis.add(arr[i]);
 			return lis;
