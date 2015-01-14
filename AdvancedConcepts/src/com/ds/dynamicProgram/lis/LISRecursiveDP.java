@@ -2,11 +2,10 @@ package com.ds.dynamicProgram.lis;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 
 public class LISRecursiveDP implements LongestIncreasingSubSequence {
-	HashMap<Integer, ArrayList<Integer>> result;
+	HashMap<Integer, ArrayList<Integer>> result; // LIS starting from the gien number. result of recursive call
 	@Override
 	public List<Integer> findLIS(int[] arr) {
 		result = new HashMap<Integer, ArrayList<Integer>>();
