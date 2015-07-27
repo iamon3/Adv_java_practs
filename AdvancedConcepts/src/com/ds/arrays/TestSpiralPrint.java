@@ -14,8 +14,8 @@ public class TestSpiralPrint {
 	private void print() {
 		int [][] arr = new int [][] {{1,2,3,4},{10, 11, 12, 5},{9, 8, 7,6}};
 		
-		int row_max = 2, row_min=0;
-		int col_max = 3, col_min=0;
+		int row_max = 2, row_min=0; // index 0 to 2
+		int col_max = 3, col_min=0; // index 0 to 3 i.e. 3 X 4 matrix
 		int dir = 1; //1 right, 2 down, 3 left, 4 up
 		int i=0, j=0;
 		
