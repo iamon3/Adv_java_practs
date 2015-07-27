@@ -1,4 +1,4 @@
-package arrSpiralPrint;
+package com.ds.arrays;
 
 /**
  *  Print array in spiral order.
